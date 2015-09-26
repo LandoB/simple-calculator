@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SimpleCalculator
 {
-    // Here is where I plan to validate that the input the user is entering is correct.
-    class Validate
+    // I'm sure I will need a Constant Class, I just need to figure out why and how to make it work.
+    class Constant
     {
     }
 }
