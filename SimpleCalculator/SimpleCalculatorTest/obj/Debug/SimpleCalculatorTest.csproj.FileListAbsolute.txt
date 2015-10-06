@@ -6,3 +6,10 @@ C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalcu
 C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\obj\Debug\SimpleCalculatorTest.csprojResolveAssemblyReference.cache
 C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculator.exe
 C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculator.pdb
+C:\Users\bernalr\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\obj\Debug\SimpleCalculatorTest.csprojResolveAssemblyReference.cache
+C:\Users\bernalr\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\obj\Debug\SimpleCalculatorTest.dll
+C:\Users\bernalr\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculatorTest.dll
+C:\Users\bernalr\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculatorTest.pdb
+C:\Users\bernalr\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculator.exe
+C:\Users\bernalr\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculator.pdb
+C:\Users\bernalr\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\obj\Debug\SimpleCalculatorTest.pdb
