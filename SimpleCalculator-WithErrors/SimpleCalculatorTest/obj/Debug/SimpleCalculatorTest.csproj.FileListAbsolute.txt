@@ -1,0 +1,8 @@
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculatorTest.dll
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculatorTest.pdb
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\obj\Debug\SimpleCalculatorTest.dll
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\obj\Debug\SimpleCalculatorTest.pdb
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\obj\Debug\SimpleCalculatorTest.csprojResolveAssemblyReference.cache
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculator.exe
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator\SimpleCalculatorTest\bin\Debug\SimpleCalculator.pdb
