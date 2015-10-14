@@ -47,7 +47,6 @@
     <Compile Include="Calculate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Slicer.cs" />
     <Compile Include="Validate.cs" />
   </ItemGroup>
   <ItemGroup>
