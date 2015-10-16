@@ -34,7 +34,7 @@ namespace SimpleCalculator1
         {
             // Split produces an array of string based on the separator symbols.
             // The separator symbols will not be included in the array.
-            var currentInput = input.Split(new char[] { '+', '-', '*', '/' });
+            var currentInput = input.Split(new char[] { '+', '-', '*', '/', '%' });
             // I must parse to the data type I want.
             var value1 = double.Parse(currentInput[0]);
             // same here. I must parse the data type I want.
@@ -50,6 +50,8 @@ namespace SimpleCalculator1
                 operation = "*";
             else if (input.Contains("/"))
                 operation = "/";
+            else if (input.Contains("%"))
+                operation = "%";
             else
                 throw new InvalidOperationException();
 
@@ -74,6 +76,9 @@ namespace SimpleCalculator1
                     break;
                 case "/":
                     value = value1 / value2;
+                    break;
+                case "%":
+                    value = value1 % value2;
                     break;
                 default:
                     throw new InvalidOperationException();
