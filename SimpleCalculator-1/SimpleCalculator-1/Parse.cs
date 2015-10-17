@@ -30,35 +30,58 @@ namespace SimpleCalculator1
             set { operador = value; }
         }
 
-        public string ReadInput(string input)
+        public void ReadInput(string input)
         {
             // Split produces an array of string based on the separator symbols.
             // The separator symbols will not be included in the array.
             var currentInput = input.Split(new char[] { '+', '-', '*', '/', '%' });
             // I must parse to the data type I want.
-            var value1 = double.Parse(currentInput[0]);
+            try
+            {
+                Value1 = double.Parse(currentInput[0]);
+            }
+            catch (Exception) {
+                Console.WriteLine("Please enter a valid number.");
+            }
             // same here. I must parse the data type I want.
-            var value2 = double.Parse(currentInput[1]);
-            string operation;
+            try
+            {
+                Value2 = double.Parse(currentInput[1]);
+            }
+
+            catch (Exception)
+            {
+                Console.WriteLine("Please enter a valid number.");
+            }
+            
+            char operation;
 
             // contains looks for the existence of the item.
             if (input.Contains("+"))
-                operation = "+";
+                operation = '+';
             else if (input.Contains("-"))
-                operation = "-";
+                operation = '-';
             else if (input.Contains("*"))
-                operation = "*";
+                operation = '*';
             else if (input.Contains("/"))
-                operation = "/";
+                operation = '/';
             else if (input.Contains("%"))
-                operation = "%";
-            else
+                operation = '%';
+            else {
+                Console.WriteLine("Please enter a valid operator.");
                 throw new InvalidOperationException();
 
-            return Calculate(value1, value2, operation).ToString();
+            }
+
+            Operador = operation;
+
+
+            //return Calculate(value1, value2, operation).ToString();
 
         }
 
+
+        // Chunk 2
         public double Calculate(double value1, double value2, string operation)
         {
             var value = 0.0;

@@ -10,7 +10,7 @@ namespace SimpleCalculatorTest_1
     {
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(FormatException))]
         public void TestOnlyOneOperatorAlllowedInInput()
         {
             Parse parse = new Parse();
@@ -19,7 +19,7 @@ namespace SimpleCalculatorTest_1
 
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(FormatException))]
         public void TestOnlyOneNumberInInput()
         {
             Parse parse = new Parse();
@@ -37,6 +37,12 @@ namespace SimpleCalculatorTest_1
             Assert.AreEqual('+', myInput.Operador);
         }
 
-
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void TestNoOperatorInInput()
+        {
+            Parse parse = new Parse();
+            parse.ReadInput("11");
+        }
     }
 }
