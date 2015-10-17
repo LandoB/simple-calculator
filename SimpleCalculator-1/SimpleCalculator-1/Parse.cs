@@ -42,6 +42,7 @@ namespace SimpleCalculator1
             }
             catch (Exception) {
                 Console.WriteLine("Please enter a valid number.");
+                throw new ArgumentException();
             }
             // same here. I must parse the data type I want.
             try
@@ -52,6 +53,7 @@ namespace SimpleCalculator1
             catch (Exception)
             {
                 Console.WriteLine("Please enter a valid number.");
+                throw new ArgumentException();
             }
             
             char operation;

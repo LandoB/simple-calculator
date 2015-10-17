@@ -10,7 +10,7 @@ namespace SimpleCalculatorTest_1
     {
 
         [TestMethod]
-        [ExpectedException(typeof(FormatException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void TestOnlyOneOperatorAlllowedInInput()
         {
             Parse parse = new Parse();
@@ -19,7 +19,7 @@ namespace SimpleCalculatorTest_1
 
 
         [TestMethod]
-        [ExpectedException(typeof(FormatException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void TestOnlyOneNumberInInput()
         {
             Parse parse = new Parse();
@@ -43,6 +43,38 @@ namespace SimpleCalculatorTest_1
         {
             Parse parse = new Parse();
             parse.ReadInput("11");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestInvalidValuesInInput()
+        {
+            Parse parse = new Parse();
+            parse.ReadInput("a+b");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestValidateInputInvalidInput()
+        {
+            Parse parse = new Parse();
+            parse.ReadInput(" my name");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestValidateInputOperadorAssign()
+        {
+            Parse parse = new Parse();
+            parse.ReadInput(" j =   44");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void TestValidateInputOperadorNotAssigned()
+        {
+            Parse parse = new Parse();
+            parse.ReadInput("d");
         }
     }
 }
