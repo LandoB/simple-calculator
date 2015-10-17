@@ -1,0 +1,7 @@
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator-1\SimpleCalculatorTest-1\bin\Debug\SimpleCalculatorTest-1.dll
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator-1\SimpleCalculatorTest-1\bin\Debug\SimpleCalculatorTest-1.pdb
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator-1\SimpleCalculatorTest-1\bin\Debug\SimpleCalculator-1.exe
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator-1\SimpleCalculatorTest-1\bin\Debug\SimpleCalculator-1.pdb
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator-1\SimpleCalculatorTest-1\obj\Debug\SimpleCalculatorTest1.csprojResolveAssemblyReference.cache
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator-1\SimpleCalculatorTest-1\obj\Debug\SimpleCalculatorTest-1.dll
+C:\Users\Rolando\Documents\GitHub\simple-calculator\SimpleCalculator-1\SimpleCalculatorTest-1\obj\Debug\SimpleCalculatorTest-1.pdb

@@ -8,6 +8,7 @@ namespace SimpleCalculator1
 {
     public class Parse
     {
+        // Chunk 1
         private double value1;
         private double value2;
         private char operador;
@@ -81,39 +82,6 @@ namespace SimpleCalculator1
             //return Calculate(value1, value2, operation).ToString();
 
         }
-
-
-        // Chunk 2
-        public double Calculate(double value1, double value2, string operation)
-        {
-            var value = 0.0;
-
-            switch (operation)
-            {
-                case "+":
-                    value = value1 + value2;
-                    break;
-                case "-":
-                    value = value1 - value2;
-                    break;
-                case "*":
-                    value = value1 * value2;
-                    break;
-                case "/":
-                    value = value1 / value2;
-                    break;
-                case "%":
-                    value = value1 % value2;
-                    break;
-                default:
-                    throw new InvalidOperationException();
-            }
-
-            return value;
-        }
-
-
-
 
     }
 }

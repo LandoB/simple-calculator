@@ -1,9 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimpleCalculator1;
-using System.Collections.Generic;
 
-namespace SimpleCalculatorTest_1
+namespace SimpleCalculatorTest1
 {
     [TestClass]
     public class ParseTest
@@ -38,7 +37,7 @@ namespace SimpleCalculatorTest_1
         }
 
         [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void TestNoOperatorInInput()
         {
             Parse parse = new Parse();
@@ -70,7 +69,7 @@ namespace SimpleCalculatorTest_1
         }
 
         [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void TestValidateInputOperadorNotAssigned()
         {
             Parse parse = new Parse();
