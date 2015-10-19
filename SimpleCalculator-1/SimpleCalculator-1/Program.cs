@@ -11,11 +11,8 @@ namespace SimpleCalculator_1
     {
         static void Main(string[] args)
         {
-            // Call to Parse class
-            
-            // Call to Evaluate class
-            
-            // Call to Stack class 
+            Calculate myCalculator = new Calculate();
+            myCalculator.RunCalculator();
         }
     }
 }
