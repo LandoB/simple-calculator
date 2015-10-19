@@ -19,7 +19,6 @@ namespace SimpleCalculator1
             set { resultado = value; }
         }
 
-
         public void Calculate(double value1, double value2, char operation)
         {
             // var myResult = 0.0;
