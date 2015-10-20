@@ -31,6 +31,19 @@ namespace SimpleCalculator1
             set { operador = value; }
         }
 
+        public void ControllerCheckInput(string input)
+        {
+            if (input.Contains("+") || input.Contains("-") || input.Contains("*") || input.Contains("/") || input.Contains("%"))
+            {
+                ReadInput(input);
+            }
+            else
+            {
+                Stack.RunKeywordEvaluation(input);
+            }
+        }
+
+
         public void ReadInput(string input)
         {
             // Split produces an array of string based on the separator symbols.
@@ -79,9 +92,8 @@ namespace SimpleCalculator1
             Operador = operation;
 
 
-            //return Calculate(value1, value2, operation).ToString();
-
         }
 
     }
 }
+

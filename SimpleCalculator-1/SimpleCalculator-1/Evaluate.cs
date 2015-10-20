@@ -19,10 +19,8 @@ namespace SimpleCalculator1
             set { resultado = value; }
         }
 
-        public void Calculate(double value1, double value2, char operation)
+        public void RunEvaluation(double value1, double value2, char operation)
         {
-            // var myResult = 0.0;
-
             switch (operation)
             {
                 case '+':
@@ -46,7 +44,9 @@ namespace SimpleCalculator1
 
             Resultado = myResult;
             
-            
+            Stack.LastInput = value1.ToString() + operation.ToString() + value2.ToString();
+            Stack.LastAnswer = resultado.ToString(); 
+
         }
     }
 }

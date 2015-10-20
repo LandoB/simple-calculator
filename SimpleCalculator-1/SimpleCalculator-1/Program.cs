@@ -11,8 +11,8 @@ namespace SimpleCalculator_1
     {
         static void Main(string[] args)
         {
-            Calculate myCalculator = new Calculate();
-            myCalculator.RunCalculator();
+            //Calculate myCalculator = new Calculate();
+            //myCalculator.RunCalculator();
         }
     }
 }
