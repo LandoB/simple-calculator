@@ -1,28 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SimpleCalculator1;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SimpleCalculatorTest1
 {
-    class StackTest
+    [TestClass]
+    public class StackTest
     {
+        [TestMethod]
+        public void TestEnteredKeywordLast()
+        {
+            string myKeyword = "last";
+            Stack.RunKeywordEvaluation(myKeyword);
+            Assert.AreEqual("last", Stack.RunKeywordEvaluation(myKeyword));
+        }
+
+        [TestMethod]
+        public void TestEnteredKeywordLastQ()
+        {
+            string myKeyword = "lastq";
+            Stack.RunKeywordEvaluation(myKeyword);
+            Assert.AreEqual("lastq", Stack.RunKeywordEvaluation(myKeyword));
+        }
+
         [TestMethod]
         public void TestStackGetAndSetAnswer()
         {
             int answer = 1;
             Stack.PutAnswerOnStack(answer.ToString());
-            Assert.AreEqual(1, Stack.GetAnswerFromStack());
+            Assert.AreEqual("1", Stack.GetAnswerFromStack());
         }
 
         [TestMethod]
-        public void TestStackGetAndSetExpression()
+        public void TestStackGetAndSetInput()
         {
-            Stack.PutInputOnStack("8 * 1");
-            Assert.AreEqual("8 * 1", Stack.GetInputFromStack());
+            Stack.PutInputOnStack("5 * 1");
+            Assert.AreEqual("5 * 1", Stack.GetInputFromStack());
         }
+
+        
     }
 }

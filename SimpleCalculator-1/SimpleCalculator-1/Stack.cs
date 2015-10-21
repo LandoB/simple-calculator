@@ -45,19 +45,21 @@ namespace SimpleCalculator1
             return lastInput;
         }
 
-        public static void RunKeywordEvaluation(string myKeyword)
+        public static string RunKeywordEvaluation(string myWord)
         {
-            switch (myKeyword)
+            switch (myWord)
             {
                 case "last":
-                    myWord = lastAnswer;
+                    Stack.myWord = lastAnswer;
                     break;
                 case "lastq":
-                    myWord = lastInput;
+                    Stack.myWord = lastInput;
                     break;
                 default:
                     throw new ArgumentException();
             }
+
+            return myWord;
 
         }
     }
