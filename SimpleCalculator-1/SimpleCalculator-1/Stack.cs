@@ -25,6 +25,26 @@ namespace SimpleCalculator1
             set { lastAnswer = value; }
         }
 
+        public static void PutAnswerOnStack(string answer)
+        {
+            lastAnswer = answer;
+        }
+
+        public static string GetAnswerFromStack()
+        {
+            return lastAnswer;
+        }
+
+        public static void PutInputOnStack(string input)
+        {
+            lastInput = input;
+        }
+
+        public static string GetInputFromStack()
+        {
+            return lastInput;
+        }
+
         public static void RunKeywordEvaluation(string myKeyword)
         {
             switch (myKeyword)
