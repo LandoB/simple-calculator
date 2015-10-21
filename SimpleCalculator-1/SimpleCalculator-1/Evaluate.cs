@@ -19,7 +19,7 @@ namespace SimpleCalculator1
             set { resultado = value; }
         }
 
-        public void RunEvaluation(double value1, double value2, char operation)
+        public void RunOperation(double value1, double value2, char operation)
         {
             switch (operation)
             {

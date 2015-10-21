@@ -12,7 +12,7 @@ namespace SimpleCalculatorTest1
         public void TestValidateInputAdd()
         {
             Evaluate myCalc = new Evaluate();
-            myCalc.RunEvaluation(7, 3, '+');
+            myCalc.RunOperation(7, 3, '+');
             Assert.AreEqual(10, myCalc.Resultado);
         }
 
@@ -20,7 +20,7 @@ namespace SimpleCalculatorTest1
         public void TestValidateInputSubtract()
         {
             Evaluate myCalc = new Evaluate();
-            myCalc.RunEvaluation(7, 3, '-');
+            myCalc.RunOperation(7, 3, '-');
             Assert.AreEqual(4, myCalc.Resultado);
         }
 
@@ -28,7 +28,7 @@ namespace SimpleCalculatorTest1
         public void TestValidateInputMultiply()
         {
             Evaluate myCalc = new Evaluate();
-            myCalc.RunEvaluation(7, 3, '*');
+            myCalc.RunOperation(7, 3, '*');
             Assert.AreEqual(21, myCalc.Resultado);
         }
 
@@ -36,7 +36,7 @@ namespace SimpleCalculatorTest1
         public void TestValidateInputDivide()
         {
             Evaluate myCalc = new Evaluate();
-            myCalc.RunEvaluation(9, 3, '/');
+            myCalc.RunOperation(9, 3, '/');
             Assert.AreEqual(3, myCalc.Resultado);
         }
 
@@ -44,7 +44,7 @@ namespace SimpleCalculatorTest1
         public void TestValidateInputModulus()
         {
             Evaluate myCalc = new Evaluate();
-            myCalc.RunEvaluation(8, 4, '%');
+            myCalc.RunOperation(8, 4, '%');
             Assert.AreEqual(0, myCalc.Resultado);
         }
 
@@ -53,7 +53,7 @@ namespace SimpleCalculatorTest1
         public void TestInvalidExpression()
         {
             Evaluate myCalc = new Evaluate();
-            myCalc.RunEvaluation(9, 3, '&');
+            myCalc.RunOperation(9, 3, '&');
 
         }
     }
