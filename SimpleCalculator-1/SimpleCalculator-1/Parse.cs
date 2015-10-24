@@ -9,17 +9,17 @@ namespace SimpleCalculator1
     public class Parse
     {
         // Chunk 1
-        private double value1;
-        private double value2;
+        private int value1;
+        private int value2;
         private char operador;
 
-        public double Value1
+        public int Value1
         {
             get { return value1; }
             set { value1 = value; }
         }
 
-        public double Value2
+        public int Value2
         {
             get { return value2; }
             set { value2 = value; }
@@ -39,7 +39,9 @@ namespace SimpleCalculator1
             }
             else
             {
-                Stack.RunKeywordEvaluation(input);
+                // Stack myInput = new Stack();
+                Stack myInput = StackSingleton.Instance;
+                myInput.RunKeywordEvaluation(input);
             }
         }
 
@@ -52,22 +54,20 @@ namespace SimpleCalculator1
             // I must parse to the data type I want.
             try
             {
-                Value1 = double.Parse(currentInput[0]);
+                Value1 = int.Parse(currentInput[0]);
             }
             catch (Exception) {
                 Console.WriteLine("Please enter a valid number.");
-                throw new ArgumentException();
             }
             // same here. I must parse the data type I want.
             try
             {
-                Value2 = double.Parse(currentInput[1]);
+                Value2 = int.Parse(currentInput[1]);
             }
 
             catch (Exception)
             {
                 Console.WriteLine("Please enter a valid number.");
-                throw new ArgumentException();
             }
             
             char operation;
@@ -90,9 +90,10 @@ namespace SimpleCalculator1
             }
 
             Operador = operation;
-
-
+            Evaluate evaluator = new Evaluate();
+            evaluator.RunOperation(value1, value2, operation);
         }
+
 
     }
 }

@@ -10,32 +10,59 @@ namespace SimpleCalculatorTest1
         [TestMethod]
         public void TestEnteredKeywordLast()
         {
-            string myKeyword = "last";
-            Stack.RunKeywordEvaluation(myKeyword);
-            Assert.AreEqual("last", Stack.RunKeywordEvaluation(myKeyword));
+            Stack myKeyword = StackSingleton.Instance;
+            Evaluate myExpression = new Evaluate();
+            myExpression.RunOperation(1, 1, '+');
+            Assert.AreEqual("2", myKeyword.RunKeywordEvaluation("last"));
         }
 
         [TestMethod]
         public void TestEnteredKeywordLastQ()
         {
-            string myKeyword = "lastq";
-            Stack.RunKeywordEvaluation(myKeyword);
-            Assert.AreEqual("lastq", Stack.RunKeywordEvaluation(myKeyword));
+            Stack myKeyword = StackSingleton.Instance;
+            Evaluate myExpression = new Evaluate();
+            myExpression.RunOperation(2, 2, '+');
+            Assert.AreEqual("2+2", myKeyword.RunKeywordEvaluation("lastq"));
         }
 
         [TestMethod]
-        public void TestStackGetAndSetAnswer()
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestNotTheRightKeyword()
         {
-            int answer = 1;
-            Stack.PutAnswerOnStack(answer.ToString());
-            Assert.AreEqual("1", Stack.GetAnswerFromStack());
+            Stack myKeyword = StackSingleton.Instance;
+            string myWord = "  lasst";
+            myKeyword.RunKeywordEvaluation(myWord);
+        }
+
+        // Chunk 4 - Constants
+
+
+        [TestMethod]
+        public void TestAddingConstantToDictionary()
+        {
+            Stack myConstant = StackSingleton.Instance;
+            string addedConstant = "a";
+            myConstant.AddConstantToDictionary("a", 1);
+            Assert.AreEqual("a", addedConstant);
         }
 
         [TestMethod]
-        public void TestStackGetAndSetInput()
+        public void TestConstantIsInDictionary()
         {
-            Stack.PutInputOnStack("5 * 1");
-            Assert.AreEqual("5 * 1", Stack.GetInputFromStack());
+            Stack myConstant = StackSingleton.Instance;
+            string key = "a";
+            myConstant.ConstantIsInDictionary("a");
+            Assert.AreEqual(false, myConstant.ConstantIsInDictionary(key));
+        }
+
+        [TestMethod]
+        public void TestGettingValueOfConstantFromDictionary()
+        {
+            Stack myConstant = StackSingleton.Instance;
+            string key = "a";
+            int value = 1;
+            myConstant.AddConstantToDictionary(key, value);
+            Assert.AreEqual(value, myConstant.ReturnConstantValue(key));
         }
 
         

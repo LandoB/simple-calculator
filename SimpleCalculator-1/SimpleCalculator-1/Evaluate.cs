@@ -10,16 +10,18 @@ namespace SimpleCalculator1
     {
         // Chunk 2
 
-        private double myResult;
-        private double resultado;
+        private int myResult;
+        private int resultado;
 
-        public double Resultado
+        Stack myInput = StackSingleton.Instance;
+
+        public int Resultado
         {
             get { return resultado; }
             set { resultado = value; }
         }
 
-        public void RunOperation(double value1, double value2, char operation)
+        public void RunOperation(int value1, int value2, char operation)
         {
             switch (operation)
             {
@@ -43,10 +45,10 @@ namespace SimpleCalculator1
             }
 
             Resultado = myResult;
+            Console.WriteLine(myResult);
             
-            Stack.LastInput = value1.ToString() + operation.ToString() + value2.ToString();
-            Stack.LastAnswer = resultado.ToString(); 
-
+            myInput.LastInput = value1.ToString() + operation.ToString() + value2.ToString();
+            myInput.LastAnswer = resultado.ToString();
         }
     }
 }

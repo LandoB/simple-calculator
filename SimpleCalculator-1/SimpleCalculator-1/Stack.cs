@@ -6,61 +6,91 @@ using System.Threading.Tasks;
 
 namespace SimpleCalculator1
 {
-    public static class Stack
+    public class Stack
     {
         // Chunk 3
-        private static string myWord; // This will contain the word that the user typed
-        private static string lastInput; // Last Evaluated Expresion - "lastq"
-        private static string lastAnswer; // Last Answer - "last"
+        //private string myWord; // This will contain the word that the user typed
+        private string lastInput; // Last Evaluated Expresion - "lastq"
+        private string lastAnswer; // Last Answer - "last"
 
-        public static string LastInput
+        public string LastInput
         {
             get { return lastInput; }
             set { lastInput = value; }
         }
 
-        public static string LastAnswer
+        public string LastAnswer
         {
             get { return lastAnswer; }
             set { lastAnswer = value; }
         }
 
-        public static void PutAnswerOnStack(string answer)
+        public string RunKeywordEvaluation(string myWord)
         {
-            lastAnswer = answer;
-        }
-
-        public static string GetAnswerFromStack()
-        {
-            return lastAnswer;
-        }
-
-        public static void PutInputOnStack(string input)
-        {
-            lastInput = input;
-        }
-
-        public static string GetInputFromStack()
-        {
-            return lastInput;
-        }
-
-        public static string RunKeywordEvaluation(string myWord)
-        {
+            string myOutput;
             switch (myWord)
             {
                 case "last":
-                    Stack.myWord = lastAnswer;
+                    myOutput = lastAnswer;
                     break;
                 case "lastq":
-                    Stack.myWord = lastInput;
+                    myOutput = lastInput;
                     break;
                 default:
                     throw new ArgumentException();
             }
 
-            return myWord;
+            return myOutput;
 
         }
+
+        // Chunk 4 - Constants
+
+        // Initialize the Dictionary
+        public Dictionary<string, int> Constants = new Dictionary<string, int>();
+
+        // Add a given Constant to the Dictionary
+
+        public bool AddConstantToDictionary(string key, int value)
+        {
+            if (!ConstantIsInDictionary(key))
+            {
+                Constants.Add(key, value);
+                return true;
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+
+        }
+
+        // Look for a value in the Dictionary
+
+        public bool ConstantIsInDictionary(string key)
+        {
+            if (Constants.ContainsKey(key))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        // Get a Constant Value from the Dictionary
+
+        public int ReturnConstantValue(string key)
+        {
+            try
+            {
+                return Constants[key];
+            }
+            catch (KeyNotFoundException)
+            {
+                throw;
+            }
+
+        }
+
     }
 }
