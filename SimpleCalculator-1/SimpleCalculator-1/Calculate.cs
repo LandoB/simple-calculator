@@ -16,11 +16,21 @@ namespace SimpleCalculator1
             string input = Console.ReadLine();
             Parse parser = new Parse();
 
-            if (input != "exit" || input != "quit") {
-                parser.ReadInput(input);
+            if (input != "exit" && input != "quit")
+            {
+                parser.ControllerCheckInput(input);
                 counter++;
                 RunCalculator();
             }
+
+            /*
+            do
+            {
+                parser.ControllerCheckInput(input);
+                counter++;
+                RunCalculator();
+            } while (input != "exit" && input != "quit");
+            */
         }
     }
 }

@@ -12,6 +12,7 @@ namespace SimpleCalculator1
         //private string myWord; // This will contain the word that the user typed
         private string lastInput; // Last Evaluated Expresion - "lastq"
         private string lastAnswer; // Last Answer - "last"
+        private string exitQuit = "Bye!";
 
         public string LastInput
         {
@@ -32,9 +33,21 @@ namespace SimpleCalculator1
             {
                 case "last":
                     myOutput = lastAnswer;
+                    Console.WriteLine(myOutput);
                     break;
                 case "lastq":
                     myOutput = lastInput;
+                    Console.WriteLine(myOutput);
+                    break;
+                case "exit":
+                    myOutput = exitQuit;
+                    Console.WriteLine(myOutput);
+                    Console.ReadLine();
+                    break;
+                case "quit":
+                    myOutput = exitQuit;
+                    Console.WriteLine(myOutput);
+                    Console.ReadLine();
                     break;
                 default:
                     throw new ArgumentException();
